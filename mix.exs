@@ -10,7 +10,10 @@ defmodule Zombie.Mixfile do
 
   defp deps do
     [
+      # Code style linter
       {:dogma, ">= 0.0.0", only: [:dev, :test]},
+      # Automatic test runner
+      {:mix_test_watch, ">= 0.0.0", only: :dev},
     ]
   end
 end
