@@ -14,6 +14,8 @@ defmodule Web.Endpoint do
     pass: ["*/*"],
     json_decoder: Poison
 
+  plug Plug.HealthCheck
+
   plug Absinthe.Plug.GraphiQL,
     schema: Web.Schema
 end

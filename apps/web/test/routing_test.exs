@@ -10,4 +10,10 @@ defmodule Web.RoutingTest do
       |> html_response(200)
     assert response =~ "graphiql"
   end
+
+  test "health check endpoint returns 200" do
+    build_conn()
+    |> get("/__health__")
+    |> response(200)
+  end
 end
